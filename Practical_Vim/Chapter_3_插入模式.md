@@ -9,9 +9,9 @@
 
 	在插入模式下使用以下命令可以删除你的输入
 	<table>
-	<tr><td> <Ctrl-h> </td><td> 删除前一个字符，和退格键相同。 </td></tr>
-	<tr><td> <Ctrl-w> </td><td> 删除前一个单词 </td></tr>
-	<tr><td> <Ctrl-u> </td><td> 删除至行首 </td></tr>
+	<tr><td> \<Ctrl-h\> </td><td> 删除前一个字符，和退格键相同。 </td></tr>
+	<tr><td> \<Ctrl-w\> </td><td> 删除前一个单词 </td></tr>
+	<tr><td> \<Ctrl-u\> </td><td> 删除至行首 </td></tr>
 	</table>
 	以上命令也可以在Vim命令模式或者shell中使用，效果相同。
 
@@ -19,9 +19,9 @@
 
 	<table>
 	<tr><td> 按键 </td><td> 用途  </td></tr>
-	<tr><td> <ESC> </td><td> 切换到普通模式。</td></tr>
-	<tr><td> <Ctrl-[> </td><td> 切换到普通模式。</td></tr>
-	<tr><td> <Ctrl-o> </td><td> 切换到插入-普通模式</td></tr>
+	<tr><td> \<ESC\> </td><td> 切换到普通模式。</td></tr>
+	<tr><td> \<Ctrl-[\> </td><td> 切换到普通模式。</td></tr>
+	<tr><td> \<Ctrl-o\> </td><td> 切换到插入-普通模式</td></tr>
 	</table>
 
 	当我们处于插入模式，想运行一个普通模式的命令，然后回到插入模式继续输入时，可以使用*插入-普通模式*。
