@@ -64,16 +64,16 @@
 7. 技巧18：用二合字母插入非常用字符
 
 	<table>
-	<tr><td>命令</td><td>输出/td></tr>
+	<tr><td>命令</td><td>输出</td></tr>
 	<tr><td>&lt;Ctrl-k&gt;12</td><td>½</td></tr>
 	<tr><td>&lt;Ctrl-k&gt;?I</td><td>¿</td></tr>
 	<tr><td>&lt;Ctrl-k&gt;>></td><td>»</td></tr>
 	</table>
 
 	可以使用以下命令获取更多关于二合字母的知识：
-	*:h digraph-table
-	*:h digraphs-default
-	*:digraphs
+	* :h digraph-table
+	* :h digraphs-default
+	* :digraphs
 
 
 
