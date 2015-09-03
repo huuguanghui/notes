@@ -29,7 +29,7 @@ Vim把以0开头的数字解释为8进制，比如在数字07上运行<C-a>就�
 8. 操作符 + 动作命令 = 操作
 
 <table>
-<tr> <td> 操作符 </td> <td> 用户说明 </td> </tr>
+<tr> <td> 操作符 </td> <td> 用途说明 </td> </tr>
 <tr> <td> c </td> <td> 修改 </td> </tr>
 <tr> <td> d </td> <td> 删除 </td> </tr>
 <tr> <td> y </td> <td> 复制到寄存器 </td> </tr>
