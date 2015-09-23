@@ -90,7 +90,7 @@
     <table>
     <tr><td>Ex命令</td><td>普通模式命令</td><td> 用途</td></tr>
     <tr><td>:clo[se]</td><td> &lt;Ctrl-w&gt;c</td><td> 关闭活动窗口</td></tr>
-    <tr><td>:on[ly] </td></td>&lt;Ctrl-w&gt;o</td></td> 只保留活动窗口，关闭其他所有窗口</td></tr>
+    <tr><td>:on[ly] </td><td>&lt;Ctrl-w&gt;o</td><td> 只保留活动窗口，关闭其他所有窗口</td></tr>
     </table>
 
     改变窗口大小
@@ -138,4 +138,4 @@
     </table>
 
     重排标签页
-    用:tabmove [N] 命令可以重新排列标签页。当[N] 为0时，当前标签页会被移到开头；如果省略了 [N],当前标签页会被移到结尾。:w
+    用:tabmove [N] 命令可以重新排列标签页。当[N] 为0时，当前标签页会被移到开头；如果省略了 [N],当前标签页会被移到结尾�t:：:��:w
