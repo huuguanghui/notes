@@ -12,9 +12,9 @@
 
     :bnext 命令可以切换到列表中下一个缓冲区。按<Ctrl-^>可以在当前文件和轮换文件中快速切换。
 
-我们可以用4条命令来便利缓冲区列表。:bnext 和 :bprev 在列表中正向或者反向移动，每次移动一项；而:bfirst 和 :blast 则分别跳到列表的开头和结尾。
+    我们可以用4条命令来便利缓冲区列表。:bnext 和 :bprev 在列表中正向或者反向移动，每次移动一项；而:bfirst 和 :blast 则分别跳到列表的开头和结尾。
 
-:ls 列表的开头有一个数字，他是在缓冲区创建时由Vim自动分配的编号，我们可以用:buffer N 命令直接凭编号跳转到一个缓冲区。
+    :ls 列表的开头有一个数字，他是在缓冲区创建时由Vim自动分配的编号，我们可以用:buffer N 命令直接凭编号跳转到一个缓冲区。
 
 2. 用参数列表将缓冲区分组
 
@@ -28,10 +28,10 @@
 
     <table>
     <tr>
-    <td>Glob模式</td><td>所匹配的文件</td>
-    <td>:args *.*</td><td>index.html <br> app.js</td>
-    <td>:args **/*.js</td><td>app.js <br> lib/framework.js <br> app/contrillers/Mailer.js </td>
-    <td>:args **/*.*</td><td>app.js <br> index.html <br> lib/framework.js <br> lib/theme.css <br>app/controllers/Mailer.js</td>
+    <td>Glob模式</td><td>所匹配的文件</td></tr>
+<tr>    <td>:args *.*</td><td>index.html <br> app.js</td></tr>
+   <tr> <td>:args **/*.js</td><td>app.js <br> lib/framework.js <br> app/contrillers/Mailer.js </td></tr>
+<tr>    <td>:args **/*.*</td><td>app.js <br> index.html <br> lib/framework.js <br> lib/theme.css <br>app/controllers/Mailer.js</td>
     </tr>
     </table>
 
@@ -63,9 +63,79 @@
 
 4. 技巧39：将工作区切分成窗口
 
-在Vim中，窗口是缓冲区的显示区域。我们既可以打开多个窗口，在这些窗口中显示同一个缓冲区，也可以在每个窗口中载入不同的缓冲区。
+    在Vim中，窗口是缓冲区的显示区域。我们既可以打开多个窗口，在这些窗口中显示同一个缓冲区，也可以在每个窗口中载入不同的缓冲区。
 
-<Ctrl-w>s命令可以水平切分当前窗口；
-<Ctrl-w>v命令可以垂直切分当前窗口；
+    &lt;Ctrl-w&gt;s命令可以水平切分当前窗口；
+    &lt;Ctrl-w&gt;v命令可以垂直切分当前窗口；
 
+    <table>
+    <tr><td>命令</td><td> 用途</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;s</td><td> 水平拆分当前窗口，新窗口仍显示当前缓冲区</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;v </td><td>垂直拆分当前窗口，新窗口仍显示当前缓冲区</td></tr>
+    <tr><td>:sp[lit] {file} </td><td>水平拆分当前窗口，并在新窗口中载入{file}</td></tr>
+    <tr><td>:vsp[lit] {file} </td><td>垂直拆分当前窗口，并在新窗口中载入{file}</td></tr>
+    </table>
 
+    Vim提供了一些在窗口间切换的命令：
+    <table>
+    <tr><td>命令</td><td> 用途</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;w</td><td> 在窗口间循环切换</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;h</td><td> 切换到左边窗口</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;j</td><td> 切换到下边窗口</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;k</td><td> 切换到上边窗口</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;l</td><td> 切换到右边窗口</td></tr>
+    </table>
+
+    关闭窗口
+    <table>
+    <tr><td>Ex命令</td><td>普通模式命令</td><td> 用途</td></tr>
+    <tr><td>:clo[se]</td><td> &lt;Ctrl-w&gt;c</td><td> 关闭活动窗口</td></tr>
+    <tr><td>:on[ly] </td></td>&lt;Ctrl-w&gt;o</td></td> 只保留活动窗口，关闭其他所有窗口</td></tr>
+    </table>
+
+    改变窗口大小
+    Vim提供了一些用于改变窗口大小的按键映射项，完整列表请查看:h window-resize,下表给出常用的命令：
+    <table>
+    <tr><td>命令</td><td>用途</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;=</td><td> 使所有的窗口等宽，等高</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;_ </td><td>最大化活动窗口的宽度</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;| </td><td>最大化活动窗口的高度</td></tr>
+    <tr><td>[N]&lt;Ctrl-w&gt;_ </td><td>把活动窗口的宽度设置为N行</td></tr>
+    <tr><td>[N}&lt;Ctrl-w&gt;| </td><td>把活动窗口的宽度设置为N行</td></tr>
+    </table>
+
+5. 技巧40：用标签也将窗口分组
+
+在Vim中，标签页可以容纳一系列的窗口，这个和其他的编辑器不同。
+
+用:tabedit {filename} 命令可以打开一个新的标签页，如果省略了{filename}参数，那么Vim会创建一个新的标签页，里面包含一个空的缓冲区。
+
+如果当前标签页中包含了不止一个窗口，我们可以用&lt;Ctrl-w&gt;T命令把当前窗口移到一个新的标签页中。
+
+如果活动标签页中只包含一个窗口，那么:close 命令将关闭此窗口以及包含此窗口的标签页。
+
+我们也可以用 :tabclose 来关闭当前标签页以及其中所有窗口。
+
+可以用:tabonly 命令关闭初当前标签以外的所有标签。
+
+<table>
+命令 用途
+<tr><td>:table[dit] {filename}</td><td> 在新标签页中打开{filename}</td></tr>
+<tr><td>&lt;Ctrl-w&gt;T </td><td>把当前窗口移到一个新标签页</td></tr>
+<tr><td>:tabc[lose] </td><td>关闭当前标签页及其中所有的窗口</td></tr>
+<tr><td>:tabo[nly] </td><td>只保留活动标签页，关闭所有其他标签页</td></tr>
+</table>
+
+在标签页间切换
+标签页编号从1开始，我们可以使用{N}gt命令在标签页间切换，Vim会跳到指定编号的标签页；如果省略了数字前缀，Vim会跳转到下一个标签页。
+gT命令功能和gt相同，只是跳转方向相反。
+
+<table>
+<tr><td>Ex命令</td><td> 普通模式命令</td><td> 用途</td></tr>
+<tr><td>:tabn[ext]</td><td> {N}gt</td><td> 切换到编号为{N}的标签页</td></tr>
+<tr><td>:tabn[ext]</td><td> gt</td><td> 切换到下一标签页</td></tr>
+<tr><td>:tabp[revious]</td><td> gT</td><td> 切换到上一标签页</td></tr>
+</table>
+
+重排标签页
+用:tabmove [N] 命令可以重新排列标签页。当[N] 为0时，当前标签页会被移到开头；如果省略了 [N],当前标签页会被移到结尾。:w
