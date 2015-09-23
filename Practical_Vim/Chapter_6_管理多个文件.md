@@ -106,36 +106,36 @@
 
 5. 技巧40：用标签也将窗口分组
 
-在Vim中，标签页可以容纳一系列的窗口，这个和其他的编辑器不同。
+    在Vim中，标签页可以容纳一系列的窗口，这个和其他的编辑器不同。
 
-用:tabedit {filename} 命令可以打开一个新的标签页，如果省略了{filename}参数，那么Vim会创建一个新的标签页，里面包含一个空的缓冲区。
+    用:tabedit {filename} 命令可以打开一个新的标签页，如果省略了{filename}参数，那么Vim会创建一个新的标签页，里面包含一个空的缓冲区。
 
-如果当前标签页中包含了不止一个窗口，我们可以用&lt;Ctrl-w&gt;T命令把当前窗口移到一个新的标签页中。
+    如果当前标签页中包含了不止一个窗口，我们可以用&lt;Ctrl-w&gt;T命令把当前窗口移到一个新的标签页中。
 
-如果活动标签页中只包含一个窗口，那么:close 命令将关闭此窗口以及包含此窗口的标签页。
+    如果活动标签页中只包含一个窗口，那么:close 命令将关闭此窗口以及包含此窗口的标签页。
 
-我们也可以用 :tabclose 来关闭当前标签页以及其中所有窗口。
+    我们也可以用 :tabclose 来关闭当前标签页以及其中所有窗口。
 
-可以用:tabonly 命令关闭初当前标签以外的所有标签。
+    可以用:tabonly 命令关闭初当前标签以外的所有标签。
 
-<table>
-命令 用途
-<tr><td>:table[dit] {filename}</td><td> 在新标签页中打开{filename}</td></tr>
-<tr><td>&lt;Ctrl-w&gt;T </td><td>把当前窗口移到一个新标签页</td></tr>
-<tr><td>:tabc[lose] </td><td>关闭当前标签页及其中所有的窗口</td></tr>
-<tr><td>:tabo[nly] </td><td>只保留活动标签页，关闭所有其他标签页</td></tr>
-</table>
+    <table>
+    命令 用途
+    <tr><td>:table[dit] {filename}</td><td> 在新标签页中打开{filename}</td></tr>
+    <tr><td>&lt;Ctrl-w&gt;T </td><td>把当前窗口移到一个新标签页</td></tr>
+    <tr><td>:tabc[lose] </td><td>关闭当前标签页及其中所有的窗口</td></tr>
+    <tr><td>:tabo[nly] </td><td>只保留活动标签页，关闭所有其他标签页</td></tr>
+    </table>
 
-在标签页间切换
-标签页编号从1开始，我们可以使用{N}gt命令在标签页间切换，Vim会跳到指定编号的标签页；如果省略了数字前缀，Vim会跳转到下一个标签页。
-gT命令功能和gt相同，只是跳转方向相反。
+    在标签页间切换
+    标签页编号从1开始，我们可以使用{N}gt命令在标签页间切换，Vim会跳到指定编号的标签页；如果省略了数字前缀，Vim会跳转到下一个标签页。
+    gT命令功能和gt相同，只是跳转方向相反。
 
-<table>
-<tr><td>Ex命令</td><td> 普通模式命令</td><td> 用途</td></tr>
-<tr><td>:tabn[ext]</td><td> {N}gt</td><td> 切换到编号为{N}的标签页</td></tr>
-<tr><td>:tabn[ext]</td><td> gt</td><td> 切换到下一标签页</td></tr>
-<tr><td>:tabp[revious]</td><td> gT</td><td> 切换到上一标签页</td></tr>
-</table>
+    <table>
+    <tr><td>Ex命令</td><td> 普通模式命令</td><td> 用途</td></tr>
+    <tr><td>:tabn[ext]</td><td> {N}gt</td><td> 切换到编号为{N}的标签页</td></tr>
+    <tr><td>:tabn[ext]</td><td> gt</td><td> 切换到下一标签页</td></tr>
+    <tr><td>:tabp[revious]</td><td> gT</td><td> 切换到上一标签页</td></tr>
+    </table>
 
-重排标签页
-用:tabmove [N] 命令可以重新排列标签页。当[N] 为0时，当前标签页会被移到开头；如果省略了 [N],当前标签页会被移到结尾。:w
+    重排标签页
+    用:tabmove [N] 命令可以重新排列标签页。当[N] 为0时，当前标签页会被移到开头；如果省略了 [N],当前标签页会被移到结尾。:w
